@@ -10,7 +10,7 @@
   - name: create tag to image
     command: docker tag simple-devops-image amitksit/simple-devops-image
   - name: push image on to dockerhub
-    command: docker push amitksit/simple-devops-image
+    command: docker push amitksit/simple-devops-image:latest
   - name: remove docker image from ansible server
     command: docker image rm simple-devops-image:latest amitksit/simple-devops-image
     ignore_errors: yes
