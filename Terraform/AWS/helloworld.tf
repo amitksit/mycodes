@@ -10,5 +10,5 @@ variable "firststring" {
 }
 
 output "myfirstoutput" {
-  value = "${var.firststring}"
+  value = $var.firststring"
 }
