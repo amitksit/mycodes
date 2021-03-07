@@ -4,7 +4,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 # 1. Create vpc
-resource "aws_vpc" "prod-vpc" {
+resource "aws_vpc" "prod_vpc" {
   cidr_block = "10.0.0.0/16"
     tags = {
         Name = "production"
