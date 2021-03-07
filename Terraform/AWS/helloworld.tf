@@ -9,7 +9,7 @@ resource "aws_instance" "my-first-server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Amit-Server"
+    Name = "ubuntu-Server"
   }
 }
 
