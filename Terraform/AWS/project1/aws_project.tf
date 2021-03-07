@@ -28,7 +28,7 @@ resource "aws_route_table" "prod_rt" {
 
   route {
     ipv6_cidr_block        = "::/0"
-    egress_only_gateway_id = aws_internet_gateway.prod_igw
+    egress_only_gateway_id = aws_internet_gateway.prod_igw.id
   }
 
   tags = {
@@ -37,7 +37,7 @@ resource "aws_route_table" "prod_rt" {
 }
 # 4. Create a Subnet
 resource "aws_subnet" "prod_subnet" {
-    vpc_id = aws_vpc.prod_vpc
+    vpc_id = aws_vpc.prod_vpc.id
     cidr_block = "10.0.1.0/24"
     availability_zone = "ap-south-1a"
     tags = {
