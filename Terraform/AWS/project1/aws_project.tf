@@ -17,7 +17,6 @@ resource "aws_internet_gateway" "prod_igw" {
         Name = "production_igw"
     }
   }
-}
 # 3. Create Custom Route Table
 resource "aws_route_table" "prod_rt" {
   vpc_id = aws_vpc.prod_vpc.id
