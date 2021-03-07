@@ -41,7 +41,7 @@ resource "aws_subnet" "prod_subnet" {
     cidr_block = "10.0.1.0/24"
     availabiltiy_zone = "ap-south-1a"
     tags = {
-        Name = production_subnet 
+        Name = "production_subnet"
     }
 }
 # 5. Associate subnet with Route Table
@@ -60,7 +60,7 @@ resource "aws_security_group" "prod_allow_web" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = "0.0.0.0/0"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
@@ -68,14 +68,14 @@ resource "aws_security_group" "prod_allow_web" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = "0.0.0.0/0"
+    cidr_blocks = ["0.0.0.0/0"]
   }  
   ingress {
     description = "SSH"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = "0.0.0.0/0"
+    cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
     from_port   = 0
