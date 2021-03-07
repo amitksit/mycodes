@@ -46,8 +46,8 @@ resource "aws_subnet" "prod_subnet" {
 }
 # 5. Associate subnet with Route Table
 resource "aws_route_table_association" "a" {
-  subnet_id      = aws_subnet.prod_subnet
-  route_table_id = aws_route_table.prod_rt
+  subnet_id      = aws_subnet.prod_subnet.id
+  route_table_id = aws_route_table.prod_rt.id
 }
 # 6. Create Security Group to allow port 22 80 443
 resource "aws_security_group" "prod_allow_web" {
