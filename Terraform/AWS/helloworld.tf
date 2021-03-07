@@ -8,9 +8,9 @@ resource "aws_instance" "my-first-server" {
   ami           = "ami-0d758c1134823146a"
   instance_type = "t2.micro"
 
-  tags = {
-    Name = "ubuntu-Server"
-  }
+# tags = {
+# Name = "ubuntu-Server"
+# }
 }
 
 /* resource "<provider>_<resource_type>" "name" {
