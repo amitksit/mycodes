@@ -105,7 +105,7 @@ resource "aws_eip" "one" {
 resource "aws_instance" "web-server-instance" {
     ami = "ami-0d758c1134823146a"
     instance_type = "t2.micro"
-    availabiltiy_zone = "ap-south-1a"
+    availability_zone = "ap-south-1a"
     key_name = "mumbai_main_key"
 
     network_interface {
