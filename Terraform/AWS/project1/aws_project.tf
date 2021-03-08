@@ -22,12 +22,12 @@ resource "aws_route_table" "prod_rt" {
   vpc_id = aws_vpc.prod_vpc.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block = ["0.0.0.0/0"]
     gateway_id = aws_internet_gateway.prod_igw.id
   }
 
   route {
-    ipv6_cidr_block        = "::/0"
+    ipv6_cidr_block        = ["::/0"]
     egress_only_gateway_id = aws_internet_gateway.prod_igw.id
   }
 
